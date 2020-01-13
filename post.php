@@ -1,7 +1,7 @@
 <?php
 $servername = "localhost";
 $username = "root";
-$password = "root@123";
+$password = "Root@123";
 $dbname = "agaram";
 if(isset($_POST["name"]) && isset($_POST["email"]) && isset($_POST["feedback"])){    
     $name=$_POST["name"];
@@ -11,7 +11,8 @@ if(isset($_POST["name"]) && isset($_POST["email"]) && isset($_POST["feedback
     if ($conn->connect_error) {        
         die("Connection failed: " . $conn->connect_error);    
     }        
-    $sql = "INSERT INTO feedback (email, username, feedback)    VALUES ($email, $name, $feedback)";        if ($conn->query($sql) === TRUE) {        
+    $sql = "INSERT INTO feedback (email, username, feedback)    VALUES ($email, $name, $feedback)";        
+    if ($conn->query($sql) === TRUE) {        
         // echo "New record created successfully";        
         http_response_code(201);         // tell the user        
         echo json_encode(array("message" => "Feedback was created."));    
