@@ -1,9 +1,10 @@
 <?php
-$servername = "localhost";
+
+if(isset($_POST["name"]) && isset($_POST["email"]) && isset($_POST["feedback"])){   
+    $servername = "localhost";
 $username = "root";
 $password = "Root@123";
 $dbname = "agaram";
-if(isset($_POST["name"]) && isset($_POST["email"]) && isset($_POST["feedback"])){    
     $name=$_POST["name"];
     $email=$_POST["email"];
     $feedback=$_POST["feedback"];
