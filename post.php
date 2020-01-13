@@ -2,7 +2,9 @@
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
-if(isset($_POST["name"]) && isset($_POST["email"]) && isset($_POST["feedback"])){   
+echo "123";
+
+if($_SERVER['REQUEST_METHOD'] == 'POST'){   
     $servername = "localhost";
 $username = "root";
 $password = "Root@123";
