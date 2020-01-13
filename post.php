@@ -1,5 +1,7 @@
 <?php
-
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 if(isset($_POST["name"]) && isset($_POST["email"]) && isset($_POST["feedback"])){   
     $servername = "localhost";
 $username = "root";
@@ -21,4 +23,6 @@ $dbname = "agaram";
             echo "Error: " . $sql . "<br>" . $conn->error;
              http_response_code(400);         // tell the user        echo json_encode(array("message" => "Unable to create feedback."));
     }        $conn->close();
-}?>
+}else{
+    echo "Get ...";
+?>
